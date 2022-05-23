@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Exercício 5.2</title>
+		<style>
+			section {
+				border-color: black;
+				border-style: solid;
+			}
+
+			.title {
+				text-align: center;
+			}
+
+			.main-content {
+				background-color: yellow;
+			}
+
+			.main-content .center-content {
+				background-color: red;
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.main-content .center-content p {
+				font-style: italic;
+			}
+
+			.main-content .left-content {
+				background-color: green;
+				width: 60%;
+				margin-left: 0;
+				margin-right: auto;
+			}
+
+			.main-content .left-content .small-image {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				border-radius: 100%;
+			}
+
+			.main-content .right-content {
+				background-color: blue;
+				width: 60%;
+				margin-left: auto;
+				margin-right: 0;
+			}
+
+			.main-content .description {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			//1 - Creat a h1 element:
+			let criaH1 = document.createElement("h1");
+			criaH1.innerText = "Adicionando texto h1";
+			//append to body
+			document.body.appendChild(criaH1);
+
+			//2
+			let criaMain = document.createElement("main");
+			criaMain.className = "main-contente";
+			document.body.appendChild(criaMain);
+
+			//3
+			let criaSection = document.createElement("section");
+			criaSection.className = "center-content";
+			document.getElementsByClassName("main-contente")[0].appendChild(criaSection);
+
+			//4
+			let criaP = document.createElement("p");
+			criaP.innerText = "Adicionando texto p";
+			document.getElementsByClassName("center-content")[0].appendChild(criaP);
+
+			//5
+			let criaSection2 = document.createElement("section");
+			criaSection2.className = "left-content";
+			document.getElementsByClassName("main-contente")[0].appendChild(criaSection2);
+
+			//6
+			let criaSection3 = document.createElement("section");
+			criaSection3.className = "right-cotent";
+			document.getElementsByClassName("main-contente")[0].appendChild(criaSection3);
+
+			//7
+			let criaImg = document.createElement("img");
+			criaImg.src = "https://picsum.photos/200";
+			criaImg.className = "small-image";
+			document.getElementsByClassName("left-content")[0].appendChild(criaImg);
+
+			//9
+			let criaH3 = document.createElement("h3");
+			document.getElementsByClassName("main-contente")[0].appendChild(criaH3);
+
+			let criaH32 = document.createElement("h3");
+			document.getElementsByClassName("main-contente")[0].appendChild(criaH32);
+
+			let criaH33 = document.createElement("h3");
+			document.getElementsByClassName("main-contente")[0].appendChild(criaH33);
+		</script>
+	</body>
+</html>
